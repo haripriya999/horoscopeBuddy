@@ -1,0 +1,77 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "horoscope buddy",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "GetHoroscopeIntent",
+                    "slots": [
+                        {
+                            "name": "dob",
+                            "type": "AMAZON.DATE"
+                        },
+                        {
+                            "name": "interval",
+                            "type": "LIST_OF_INTERVALS"
+                        }
+                    ],
+                    "samples": [
+                        "tell me horoscope of {interval}",
+                        "{dob}",
+                        "tell me horoscope",
+                        "my date of birth is {dob}",
+                        "{interval}",
+                        "my date of birth is {dob} and interval {interval}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "LIST_OF_INTERVALS",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "year"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "month"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "week"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "today"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
